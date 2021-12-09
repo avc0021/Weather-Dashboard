@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    color:rgba(233, 231, 241, 0.938);
+    background-color: rgb(22, 16, 102);
+    padding: 20px 0 20px 0;
+}
+
+input {
+    
+
+}
