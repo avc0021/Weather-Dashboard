@@ -9,44 +9,52 @@
 </head>
   <body>
 
-    <!--title-->
-    <header class="has-text-centered">
-      <h1 class="wd is-size-2">
-        Weather Dashboard
-      </h1>
-    </header>
+     <!--title-->
+     <header class="has-text-centered">
+        <h1 class="wd is-size-2">
+          Weather Dashboard
+        </h1>
+      </header>
 
-</main>
-    <!--search by city-->
-    <section class="section">
-        <div class="container">
-        <div class="search is-pulled-left">Search for a city:</div>
-            <input type="text" id="name" name="name" required
-            minlength="4" maxlength="8" size="10">    
-            <button type="button" class="button is-info ">Search</button>
+<section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3">
+                    <div class="search is-pulled-left">Search for a city:</div>
 
-            <div class="">
-            <button class="austin is-pulled-left">Austin</button>
-            <button class="chicago is-pulled-left">Chicago</button>
-            <button class="new-york is-pulled-left">New York</button>
-            <button class="las-vegas is-pulled-left">Las Vegas</button>
+                        <input type="text" id="name" name="name" required
+                        minlength="4" maxlength="15" size="10" class="input">    
+                        <button type="button" class="button is-info ">Search</button>
+            
+                    </div>
+            <div class="location column is-9">
+                <strong>Location Here (with today date)</strong>
+            </div>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
 
-  <div class="table-container is-pulled-right">
-    <table class="current-weather">
-     Current Weather/Date goes here
-    </table>
-  </div>
-  
-  <div class="five-day-title">
-    <h2>5 day forcast</h2>
-    <table class="5-day-forecast">
-     Listing for 5 day forcast
-    </table>
-  </div>
-</main>?????posible use the car class in each section?
+<section class="section">
+    <div class="container">
+        <div class="columns">
+
+            <div class="column is-div class="column is-3>
+                <div class="cities">
+                    <button class="austin">Austin</button>
+                    <button class="chicago">Chicago</button>
+                    <button class="new-york">New York</button>
+                    <button class="las-vegas">Las Vegas</button>
+                </div>
+            </div>
+            <div class="column is-div class=column is-9">
+                <div class="cities">
+                    <strong>5 Day Forcast</strong>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
 
 
 </body>
