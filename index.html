@@ -22,9 +22,9 @@
             <div class="column is-3">
                     <div class="search is-pulled-left">Search for a city:</div>
 
-                        <input type="text" id="name" name="name" required
+                        <input type="text" id="search" name="search" required
                         minlength="4" maxlength="15" size="10" class="input">    
-                        <button type="button" class="button is-info ">Search</button>
+                        <button type="button" class="button is-info">Search</button>
             
                     </div>
             <div class="location column is-9">
@@ -37,18 +37,22 @@
 <section class="section">
     <div class="container">
         <div class="columns">
-
-            <div class="column is-div class="column is-3>
-                <div class="cities">
-                    <button class="austin">Austin</button>
-                    <button class="chicago">Chicago</button>
-                    <button class="new-york">New York</button>
-                    <button class="las-vegas">Las Vegas</button>
+                <div class="cities column is-3 is-div">
+                    <button class="austin" id="austin">Austin</button>
+                    <button class="chicago" id="chicago">Chicago</button>
+                    <button class="new-york" id="new-york">New York</button>
+                    <button class="las-vegas" id="las-vegas">Las Vegas</button>
                 </div>
-            </div>
-            <div class="column is-div class=column is-9">
-                <div class="cities">
+            <div class="column is-div is-9">
+                <div class="five-day row-is-full">
                     <strong>5 Day Forcast</strong>
+                    
+                    <div class="one-after">hello</div>
+                    <div class="two-after">hello</div>
+                    <div class="three-after">hello</div>
+                    <div class="four-after">hello</div>
+                    <div class="five-after">hello</div>
+                </div>
                 </div>
             </div>
             
@@ -56,6 +60,6 @@
     </div>
 </section>
 
-
-</body>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>

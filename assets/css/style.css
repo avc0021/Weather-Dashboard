@@ -17,9 +17,28 @@ header {
 .cities {
     display:flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .location {
     border: 3px solid black;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.five-day {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.one-after, 
+.two-after, 
+.three-after, 
+.four-after,
+.five-after {
+    display:table-row;
+    flex-direction: column;
+    
 }
