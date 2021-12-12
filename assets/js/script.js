@@ -1,42 +1,78 @@
 //variables for project
-var search = document.getElementById (search)
+var austin = document.getElementById('austin')
+var chicago = document.getElementById('chicago')
+var newYork = document.getElementById('new-york')
+var lasVegas = document.getElementById('las-vegas')
+var sa = "https://api.openweathermap.org/data/2.5/onecall?lat=29.42&lon=-98.49&appid=7860cffc7f19757620d3827d0f41eb5b";
+var austin= "https://api.openweathermap.org/data/2.5/onecall?lat=30.26&lon=-97.73&appid=7860cffc7f19757620d3827d0f41eb5b";
+var chicago= "https://api.openweathermap.org/data/2.5/onecall?lat=41.88&lon=-87.62&appid=7860cffc7f19757620d3827d0f41eb5b";
+var ny= "https://api.openweathermap.org/data/2.5/onecall?lat=40.73&lon=-73.93&appid=7860cffc7f19757620d3827d0f41eb5b";
+var vegas = "https://api.openweathermap.org/data/2.5/onecall?lat=36.11&lon=-115.17&appid=7860cffc7f19757620d3827d0f41eb5b";
+
 
 //call web api display current location details and todays day
-var getSaWeather = function() {
-    fetch("https://api.openweathermap.org/data/2.5/onecall?lat=29.42&lon=-99.49&appid=d310cdc3e7de424fc0047cf1fd72fd27");
-    console.log("function called SA!")
-};
 
-getSaWeather();
+function getCurrent() { 
+    fetch(sa).then(function(response) {
+        // request was successful
+        if (response.ok) {
+          response.json().then(function(data) {
+            getCurrent(weather);
+          });
+        } else {
+          alert("Error: " + response.statusText);
+        }
+      });
+    document.getElementById("page-start").textContent = page;
 
-//parse info/ pull only info needed
+    console.log(weather);
+
+
+}
+getCurrent();
+    
+
+
+
+
+    
 
 //click austin button and displays weather and 5 day forcast
-var getAustinWeather = function() {
-    fetch("https://api.openweathermap.org/data/2.5/onecall?lat=30.26&lon=-97.73&appid=d310cdc3e7de424fc0047cf1fd72fd27");
-    console.log("function called austin!")
+function getAustin() {
+    var requestAustin= 
+    
+    console.log (getAustin)
+    fetch(requestAustin)
+    .then(function(response) {
+        console.log(response);
+        return response.json();
+    })
+    
+    
 };
-getAustinWeather();
+
 
 //click chicago button and displays weather and 5 day forcast
-var getChicagoWeather = function() {
-    fetch("https://api.openweathermap.org/data/2.5/onecall?lat=41.88&lon=-87.62&appid=d310cdc3e7de424fc0047cf1fd72fd27");
+var getChicagoWeather = function(Chicago) {
+    
     console.log("function called chicago!")
+    
 };
-getChicagoWeather();
+
 
 //click new york button and displays weather and 5 day forcast
-var getNewYorkWeather = function() {
-    fetch("https://api.openweathermap.org/data/2.5/onecall?lat=40.73&lon=-73.93&appid=d310cdc3e7de424fc0047cf1fd72fd27");
+var getNewYorkWeather = function(NewYork) {
+    
     console.log("function called new york!")
 };
-getNewYorkWeather();
+
 
 //click las vegas button and displays weather and 5 day forcast
-var getVegasWeather = function() {
-    fetch("https://api.openweathermap.org/data/2.5/onecall?lat=36.11&lon=-115.17&appid=d310cdc3e7de424fc0047cf1fd72fd27");
+var getVegasWeather = function(Vegas) {
+    fetch("https://api.openweathermap.org/data/2.5/onecall?lat=36.11&lon=-115.17&appid=7860cffc7f19757620d3827d0f41eb5b");
     console.log("vegas!")
 };
-getVegasWeather();
+
 
 //click button and displays weather and 5 day forcast for city requested
+chicago.addEventListener('click', chicago);
