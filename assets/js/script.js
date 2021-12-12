@@ -12,20 +12,20 @@ var vegas = "https://api.openweathermap.org/data/2.5/onecall?lat=36.11&lon=-115.
 
 //call web api display current location details and todays day
 
-function getCurrent() { 
+var getCurrent = function() { 
     fetch(sa).then(function(response) {
-        // request was successful
+        
         if (response.ok) {
           response.json().then(function(data) {
-            getCurrent(weather);
+            console.log(weather);
           });
         } else {
-          alert("Error: " + response.statusText);
+          alert("Error");
         }
       });
-    document.getElementById("page-start").textContent = page;
+    document.getElementById("page-start").textContent = "";
 
-    console.log(weather);
+    console.log("getCurrent");
 
 
 }
