@@ -12,25 +12,25 @@ var vegas = "https://api.openweathermap.org/data/2.5/onecall?lat=36.11&lon=-115.
 
 //call web api display current location details and todays day
 
-var getCurrent = function() { 
-    fetch(sa).then(function(response) {
-        
-        if (response.ok) {
-          response.json().then(function(data) {
-            console.log(weather);
-          });
-        } else {
-          alert("Error");
-        }
-      });
-    document.getElementById("page-start").textContent = "";
+var lasVegas = function () {
+  
+ 
+    fetch(vegas)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      appendData(data);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+    function appendData(data) {
+      var mainContainer = document.getElementById("page-start");
+      mainContainer.appendChild("page-start");
+    };
 
-    console.log("getCurrent");
 
-
-}
-getCurrent();
-    
 
 
 
@@ -38,41 +38,37 @@ getCurrent();
     
 
 //click austin button and displays weather and 5 day forcast
-function getAustin() {
-    var requestAustin= 
+//function getAustin() {
+    //var requestAustin= 
     
-    console.log (getAustin)
-    fetch(requestAustin)
-    .then(function(response) {
-        console.log(response);
-        return response.json();
-    })
+    //console.log (getAustin)
+    //fetch(requestAustin)
+    //.then(function(response) {
+        //console.log(response);
+        //return response.json();
+    //})
     
     
-};
+//};
 
 
 //click chicago button and displays weather and 5 day forcast
-var getChicagoWeather = function(Chicago) {
+//var getChicagoWeather = function(Chicago) {
+    //console.log("function called chicago!")
     
-    console.log("function called chicago!")
-    
-};
+//};
 
 
 //click new york button and displays weather and 5 day forcast
-var getNewYorkWeather = function(NewYork) {
-    
-    console.log("function called new york!")
-};
+//var getNewYorkWeather = function(NewYork) {
+    ///console.log("function called new york!")
+//};
 
 
 //click las vegas button and displays weather and 5 day forcast
-var getVegasWeather = function(Vegas) {
-    fetch("https://api.openweathermap.org/data/2.5/onecall?lat=36.11&lon=-115.17&appid=7860cffc7f19757620d3827d0f41eb5b");
-    console.log("vegas!")
-};
+//var getVegasWeather = function(Vegas) {
+    //console.log("vegas!")
+//};
 
 
 //click button and displays weather and 5 day forcast for city requested
-chicago.addEventListener('click', chicago);
