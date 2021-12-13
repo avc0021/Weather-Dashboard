@@ -3,32 +3,49 @@ var austin = document.getElementById('austin')
 var chicago = document.getElementById('chicago')
 var newYork = document.getElementById('new-york')
 var lasVegas = document.getElementById('las-vegas')
-var sa = "https://api.openweathermap.org/data/2.5/onecall?lat=29.42&lon=-98.49&appid=7860cffc7f19757620d3827d0f41eb5b";
-var austin= "https://api.openweathermap.org/data/2.5/onecall?lat=30.26&lon=-97.73&appid=7860cffc7f19757620d3827d0f41eb5b";
-var chicago= "https://api.openweathermap.org/data/2.5/onecall?lat=41.88&lon=-87.62&appid=7860cffc7f19757620d3827d0f41eb5b";
-var ny= "https://api.openweathermap.org/data/2.5/onecall?lat=40.73&lon=-73.93&appid=7860cffc7f19757620d3827d0f41eb5b";
-var vegas = "https://api.openweathermap.org/data/2.5/onecall?lat=36.11&lon=-115.17&appid=7860cffc7f19757620d3827d0f41eb5b";
+var sa = "https://api.openweathermap.org/data/2.5/onecall?lat=29.42&lon=-98.49&exclude=hourly,daily&appid=7860cffc7f19757620d3827d0f41eb5b";
+var austin= "https://api.openweathermap.org/data/2.5/onecall?lat=30.26&lon=-97.73&exclude=hourly,daily&appid=7860cffc7f19757620d3827d0f41eb5b";
+var chicago= "https://api.openweathermap.org/data/2.5/onecall?lat=41.88&lon=-87.62&exclude=hourly,daily&appid=7860cffc7f19757620d3827d0f41eb5b";
+var ny= "https://api.openweathermap.org/data/2.5/onecall?lat=40.73&lon=-73.93&exclude=hourly,daily&appid=7860cffc7f19757620d3827d0f41eb5b";
+var vegas = "https://api.openweathermap.org/data/2.5/onecall?lat=36.11&lon=-115.17&exclude=hourly,daily&appid=7860cffc7f19757620d3827d0f41eb5b";
 
 
 //call web api display current location details and todays day
 
-var lasVegas = function () {
-  
- 
-    fetch(vegas)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      appendData(data);
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
-    function appendData(data) {
-      var mainContainer = document.getElementById("page-start");
-      mainContainer.appendChild("page-start");
-    };
+var hailMary = function() {
+  fetch(vegas)
+  .then(response);
+  const data = response.json();
+  console.log(data);
+  const { current } = data;
+
+  document.getElementById("page-start").appendChild = city;
+}
+hailMary();
+
+
+//     var node = document.createElement("li");
+//     var textNode = document.createTextNode("water");
+//     node.appendChild(textNode);
+//     document.getElementById("page-start").appendChild(node);
+// }
+
+
+
+    // fetch(vegas)
+    // .then(function (response) {
+    //   return response.json();
+    // })
+    // .then(function (data) {
+    //   appendData(data);
+    // })
+    // .catch(function (err) {
+    //   console.log(err);
+    // });
+    // function appendData(data) {
+    //   var mainContainer = document.getElementById("page-start");
+    //   mainContainer.appendChild("page-start");
+    // };
 
 
 
