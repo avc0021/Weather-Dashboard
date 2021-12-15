@@ -1,8 +1,8 @@
 //variables for project
-var austin = document.getElementById('austin')
-var chicago = document.getElementById('chicago')
-var newYork = document.getElementById('new-york')
-var lasVegas = document.getElementById('las-vegas')
+var austin = document.getElementById('austin');
+var chicago = document.getElementById('chicago');
+var newYork = document.getElementById('new-york');
+var lasVegas = document.getElementById('las-vegas');
 var sa = "https://api.openweathermap.org/data/2.5/onecall?lat=29.42&lon=-98.49&exclude=hourly,daily&appid=7860cffc7f19757620d3827d0f41eb5b";
 var austin= "https://api.openweathermap.org/data/2.5/onecall?lat=30.26&lon=-97.73&exclude=hourly,daily&appid=7860cffc7f19757620d3827d0f41eb5b";
 var chicago= "https://api.openweathermap.org/data/2.5/onecall?lat=41.88&lon=-87.62&exclude=hourly,daily&appid=7860cffc7f19757620d3827d0f41eb5b";
@@ -12,16 +12,23 @@ var vegas = "https://api.openweathermap.org/data/2.5/onecall?lat=36.11&lon=-115.
 
 //call web api display current location details and todays day
 
-var hailMary = function() {
-  fetch(vegas)
-  .then(response);
-  const data = response.json();
-  console.log(data);
-  const { current } = data;
+var getCurrent = function () {
+  
 
-  document.getElementById("page-start").appendChild = city;
-}
-hailMary();
+    fetch(sa).then(function (response) {
+      response.json().then(function (data) {
+        console.log(data);
+        var d= document.createElement("div");
+        d.classList.add("page-start");
+        document.getElementById("page-start").appendChild(d);
+        
+      });
+    });
+  };
+
+getCurrent();
+  
+
 
 
 //     var node = document.createElement("li");
