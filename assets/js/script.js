@@ -5,9 +5,30 @@ var newYork = document.getElementById('new-york');
 var lasVegas = document.getElementById('las-vegas');
 
 //call web api display current location details and todays day
-var currentWeather = "https://api.openweathermap.org/data/2.5/weather?q=san%20antonio&appid=7860cffc7f19757620d3827d0f41eb5b"
-var fiveDay = "https://api.openweathermap.org/data/2.5/forecast?q=san%20antonio&appid=7860cffc7f19757620d3827d0f41eb5b"
+var currentWeather = "https://api.openweathermap.org/data/2.5/weather?q=san%20antonio&units=imperial&appid=7860cffc7f19757620d3827d0f41eb5b"
+var fiveDay = "https://api.openweathermap.org/data/2.5/forecast?q=san%20antonio&units=imperial&appid=7860cffc7f19757620d3827d0f41eb5b"
 
+var weatherNow = function () {
+fetch(currentWeather)
+.then(function (response){
+//response.json();
+
+    if (response.ok) {
+        response.json().then(responsedata => {
+        //document.getElementsByClassName("current-location").innerHTML = responsedata.weather;
+        document.getElementsByClassName("current-location")[0].innerHTML = (JSON.stringify(responsedata.weather));
+        
+        //console.log(JSON.stringify(responsedata.weather))
+    })
+    }
+}
+)};
+var btn = document.querySelector(".austin")
+btn.addEventListener("click",weatherNow);
+
+
+
+//[0].innerHTML
 
 
   
