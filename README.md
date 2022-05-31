@@ -1,7 +1,7 @@
 # Weather-Dashboard
 
 ## Purpose
-This website application offers latest and furture conditions.
+This website application displays latest and furture weather conditions. 
 
 ## Built With
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white)
