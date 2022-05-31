@@ -1,44 +1,51 @@
-* {
+html {
     box-sizing: border-box;
-    
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+#city-uv-text {
+  display: inline-flex;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+#city-weather-icon {
+  display: inline-flex;
 }
 
-header {
-    color:rgba(233, 231, 241, 0.938);
-    background-color: rgb(22, 16, 102);
-    padding: 20px 0 20px 0;
+.banner {
+  background-image: linear-gradient(to right, blue , navy);
 }
 
-.cities {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-around;
+.daily {
+  background-color: rgb(29, 29, 133);
+  color: white;
+  border-radius: 15px;
 }
 
-.current-location {
-    border: 3px solid black;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
+.daily p {
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 10px;
+  
 }
 
-.five-day {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
+.forecast {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
 }
 
-.one-after, 
-.two-after, 
-.three-after, 
-.four-after,
-.five-after {
-    display:table-row;
-    flex-direction: column;
-    
+.weather-info span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.daily-icon, #city-weather-icon {
+  align-items: center;
+  background-color: tan;
+  border-radius: 50%;
+}
+
+.daily-icon {
+  display: block;
+  margin: auto;
 }
