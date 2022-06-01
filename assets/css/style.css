@@ -1,51 +1,11 @@
-html {
-    box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-
-#city-uv-text {
-  display: inline-flex;
+header {
+  background-image: linear-gradient(to right, rgb(215, 215, 215) , rgb(66, 66, 72));
 }
 
-#city-weather-icon {
-  display: inline-flex;
+button {
+  margin-top: 10px;
 }
 
-.banner {
-  background-image: linear-gradient(to right, blue , navy);
-}
-
-.daily {
-  background-color: rgb(29, 29, 133);
-  color: white;
-  border-radius: 15px;
-}
-
-.daily p {
-  font-size: x-large;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 10px;
+bg-info {
   
-}
-
-.forecast {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-}
-
-.weather-info span {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.daily-icon, #city-weather-icon {
-  align-items: center;
-  background-color: tan;
-  border-radius: 50%;
-}
-
-.daily-icon {
-  display: block;
-  margin: auto;
 }
