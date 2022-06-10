@@ -13,15 +13,15 @@ var weatherBlocks = document.getElementById("weather-blocks");
 var todaysIconHTML = document.getElementById("todays-icon");
 
 getWeather = function (intialCityName) {
-  // console.log(C)
-  let getThatWeater =
+
+  let getThatWeather =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     intialCityName +
     "&units=imperial&appid=7860cffc7f19757620d3827d0f41eb5b";
 
-  fetch(getThatWeater).then(function (response) {
+  fetch(getThatWeather).then(function (response) {
     console.log(response);
-    // console.log(response);
+  
 
     if (response.ok) {
       response.json().then(function (data) {
