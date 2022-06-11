@@ -152,14 +152,14 @@ getWeather = function (intialCityName) {
 };
 
 displayHistory = function () {
-  searchHistoy = JSON.parse(localStorage.getItem("City History"));
+  searchHistory = JSON.parse(localStorage.getItem("City History"));
 
-  if (searchHistoy == null) {
-    searchHistoy = [];
+  if (searchHistory == null) {
+    searchHistory = [];
     getWeather("San Antonio");
   } else {
     //this will display the last searched city on page load.
-    var lastSearchedItem = searchHistoy.slice(-1);
+    var lastSearchedItem = searchHistory.slice(-1);
 
     for (let i = 0; i < 1; i++) {
       let displayLastCity = lastSearchedItem[i].Name;
@@ -168,8 +168,8 @@ displayHistory = function () {
     }
 
     //this will display the localstroage in reverse order
-    for (let i = searchHistoy.length - 1; i >= 0; i--) {
-      let startingPoint = searchHistoy.length - 1;
+    for (let i = searchHistory.length - 1; i >= 0; i--) {
+      let startingPoint = searchHistory.length - 1;
       let endPoint = startingPoint - 10;
       console.log(startingPoint);
       console.log(i);
@@ -178,7 +178,7 @@ displayHistory = function () {
       if (i == endPoint) {
         break;
       } else {
-        let thisCity = searchHistoy[i].Name;
+        let thisCity = searchHistory[i].Name;
         var historyDiv = document.createElement("button");
 
         theSearchHistory.appendChild(historyDiv);
