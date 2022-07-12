@@ -1,7 +1,7 @@
 # Weather-Dashboard
 
 ## Purpose
-This website application displays latest and furture weather conditions by pulling data from OpenWeather API. 
+This website application displays latest and future weather conditions by pulling data from OpenWeather API. 
 
 ## Built With
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=plastic&logo=html5&logoColor=white)
